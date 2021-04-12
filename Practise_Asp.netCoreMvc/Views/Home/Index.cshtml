@@ -1,0 +1,48 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Home Page";
+}
+@*<h1 class="display-4">Welcome</h1>
+<h1>@ViewBag.PageTitle</h1>
+<h1>Data showing throw ViewBag or loosely coupled</h1>*@
+
+<div class="justify-content-center row m-3">
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="card-header">
+                <h1>@Model.Name</h1>
+            </div>
+            
+            <div class="card-body text-center">
+                <img class="card-img-top" src="~/Images/beachimg.jpg" asp-append-version="true"/>
+                <h1>ID:@Model.ID</h1>
+                <h1>Name:@Model.Name</h1>
+                <h1>Email:@Model.Email</h1>
+                <h1> Department:@Model.Department</h1>
+            </div>
+          
+            <div class="card-footer text-center">
+
+                <a asp-controller="Home" asp-action="Privacy" class="btn btn-primary">Back</a>
+                <a href="#" class="btn btn-info">Edit</a>
+                <a href="#" class="btn btn-danger">Delete</a>
+            </div>
+              
+        </div>
+    </div>
+</div>
+
+@*{
+           var emplyee = ViewData["Employee"] as EmployeeManagement.Models.Employee;
+        }
+
+    <div>
+        Name:@ViewBag.Employee.Name
+    </div>
+    <div>
+        Email:@ViewBag.Employee.Email
+    </div>
+    <div>
+        Name:@ViewBag.Employee.Department
+    </div>
+    <hr color="red" />*@
